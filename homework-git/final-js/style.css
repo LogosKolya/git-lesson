@@ -1,0 +1,202 @@
+html {
+    min-height: 100vh;
+}
+body{
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.second {
+    margin-top: 20px;
+    font-size: 60px;
+    font-family: sans-serif;
+    color: #8f1a1a;
+}
+.buttons {
+    margin: 25px auto 25px;
+}
+.count {
+    display: none;
+}
+.container{
+    margin: auto;
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.number-box {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.number {
+    width: 75px;
+    height: 75px;
+    border: 1px solid #000;
+    background-color: lightgray;
+    color: rgba(255, 255, 255, 0);
+    font-size: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 420%;
+}
+.n1 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+}
+.n2 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -75px 0px;
+}
+.n3 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -150px 0px;
+}
+.n4 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -225px 0px;
+}
+.n5 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: 0px -75px;
+}
+.n6 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -75px -75px;
+}
+.n7 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -150px -75px;
+}
+.n8 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -225px -75px;
+}
+.n9 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: 0px -150px;
+}
+.n10 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -75px -150px;
+}
+.n11 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -150px -150px;
+}
+.n12 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -225px -150px;
+}
+.n13 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: 0px -225px;
+}
+.n14 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -75px -225px;
+}
+.n15 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -150px -225px;
+}
+.n16 {
+    background-image: url("https://storage.googleapis.com/minalima/2019/02/large-hogwarts-crest-poster-scaled-1300x1300.jpg");
+    background-size: 410%;
+    background-position: -225px -225px;
+}
+#start {
+    width: 300px;
+    height: 300px;
+}
+.end {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.containEnd, .containStart {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-color: #ff3e3e;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-content: flex-start;
+   background-size: cover;
+}
+.modal {
+    position: absolute;
+    display: none;
+    text-align: right;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #de9494;
+    border: 2px solid #8f1a1a;
+    width: 500px;
+    height: 80px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 10px 15px;
+    color: #8f1a1a;
+}
+.close {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #8f1a1a;
+}
+.modalText {
+    width: 100%;
+    text-align: center;
+}
+#check {
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #8f1a1a;
+    color: #8f1a1a;
+    border-radius: 3px;
+}
+.modalAnswer {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+input {
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #8f1a1a;
+    color: #8f1a1a;
+    border-radius: 3px;
+}
+input:disabled {
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #5d5d5d;
+    color: #5d5d5d;
+    border-radius: 3px;
+}

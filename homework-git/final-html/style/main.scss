@@ -1,0 +1,743 @@
+@import 'base/base';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'fonts/fonts';
+
+/*=====================================================================================*/
+/*----------------------------------Desktop Portrait-----------------------------------*/
+/*=====================================================================================*/
+
+body {
+  overflow-x: hidden;
+  header {
+    background-color: lightsalmon;
+    height: 700px;
+    background-image: url("../img/BG.png");
+    padding-top: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .menu {
+      @include wh(65.5%, 36px);
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      &__logo {
+        width: 300px;
+        &__item {
+          font-family: Montserrat-Bold;
+          @include textSet(20px, 24px, none, white);
+        }
+      }
+      &__navigation {
+        width: 195px;
+        justify-content: start;
+        &__item {
+          font-family: Montserrat-Regular;
+          @include textSet(14px, 17px, none, white);
+          &-active {
+            border: white 1px solid;
+            border-radius: 40px;
+            padding: 8px 16px;
+            margin-left: 17px;
+          }
+        }
+      }
+    }
+
+    .underMenu {
+      margin-top: 149.5px;
+      @include wh(470px, 252.5px);
+      @include flexing(flex, column, space-between);
+      align-items: center;
+      h1 {
+        font-family: Montserrat-Bold;
+        @include textSet(52px, 63px, none, white);
+        text-align: center;
+      }
+      h7 {
+        font-family: Roboto-Light;
+        @include textSet(24px, 24px, none, white);
+        margin-bottom: 5px;
+      }
+      form {
+        .mainButton {
+          font-family: Montserrat-Bold;
+          @include textSet(14px, 17px, none, white);
+          @include wh(225px, 40px);
+          text-decoration: none;
+          background-color: $colorButton;
+          border: none;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      @include wh(940px, auto);
+      margin: 90px auto;
+      h2 {
+        font-family: Montserrat-Bold;
+        @include textSet(26px, 32px, none, #444444);
+        text-align: center;
+        margin-bottom: 34px;
+      }
+      .cards {
+        @include flexing(flex, row, space-between);
+        &__card {
+          @include wh(300px, 400px);
+          @include flexing(flex, column, end);
+          background-color: $colorButton;
+          border-radius: 3px;
+          padding: 21px 25px;
+          &-one {
+            background-image: url("../img/Section-1/one.png");
+          }
+          &-two {
+            background-image: url("../img/Section-1/Two.png");
+          }
+          &-three {
+            background-image: url("../img/Section-1/Three.png");
+          }
+          &__steps {
+            font-family: Montserrat-Regular;
+            @include wh(70px, 20px);
+            @include textSet(10px, 12px, none, white);
+            @include flexing(flex, column, center);
+            background-color: $colorButton;
+            border-radius: 40px;
+            text-align: center;
+          }
+          h3 {
+            font-family: Montserrat-Bold;
+            @include textSet(24px, 26px, none, white);
+            margin: 23px 0 0;
+          }
+          .pSpace {
+            font-family: Roboto-Light;
+            @include textSet(14px, 14px, none, gray);
+            margin: 23px 0 0;
+          }
+        }
+      }
+    }
+
+   .section2 {
+     .cards {
+       @include flexing(flex, row, space-between);
+       &__avatars {
+         @include wh(221px, 224px);
+         @include flexing(flex, column, start);
+         align-content: center;
+         align-items: center;
+         &__ava {
+           @include wh(120px, 120px);
+           border-radius: 120px;
+           &-one {
+             background-image: url("../img/Section-2/One.png");
+             &::after {
+               content: "";
+               background-image: url("../img/icons/music2.png");
+               background-position: center;
+               background-repeat: no-repeat;
+               @include wh(32px, 32px);
+               position: absolute;
+               background-color: $colorButton;
+               margin: 83px 0 0 83px;
+               border-radius: 32px;
+               border: 5px white solid;
+               box-sizing: content-box;
+             }
+           }
+           &-two {
+             background-image: url("../img/Section-2/Two.png");
+             &::after {
+               content: "";
+               background-image: url("../img/icons/brush.png");
+               background-position: center;
+               background-repeat: no-repeat;
+               @include wh(32px, 32px);
+               position: absolute;
+               background-color: #19D4CA;
+               margin: 83px 0 0 83px;
+               border-radius: 32px;
+               border: 5px white solid;
+               box-sizing: content-box;
+             }
+           }
+           &-three {
+             background-image: url("../img/Section-2/Three.png");
+             &::after {
+               content: "";
+               background-image: url("../img/icons/camera.png");
+               background-position: center;
+               background-repeat: no-repeat;
+               @include wh(32px, 32px);
+               position: absolute;
+               background-color: #FFA710;
+               margin: 83px 0 0 83px;
+               border-radius: 32px;
+               border: 5px white solid;
+               box-sizing: content-box;
+             }
+           }
+           &-four {
+             background-image: url("../img/Section-2/Four.png");
+             &::after {
+               content: "";
+               background-image: url("../img/icons/airplane.png");
+               background-position: center;
+               background-repeat: no-repeat;
+               @include wh(32px, 32px);
+               position: absolute;
+               background-color: #667DF3;
+               margin: 83px 0 0 83px;
+               border-radius: 32px;
+               border: 5px white solid;
+               box-sizing: content-box;
+             }
+           }
+         }
+         h4 {
+           font-family: Montserrat-Bold;
+           @include textSet(14px, 17px, none, #444444);
+           margin: 19px 0;
+         }
+         .pCenter {
+           font-family: Roboto-Light;
+           @include textSet(14px, 14px, none, gray);
+           text-align: center;
+         }
+       }
+     }
+     form {
+       @include flexing(flex, row, center);
+       margin-top: 35px;
+       .seeOther {
+         font-family: Montserrat-Bold;
+         @include textSet(14px, 17px, none, $colorButton);
+         @include wh(180px, 40px);
+         text-decoration: none;
+         background-color: white;
+         border: none;
+         border: 2px $colorButton solid;
+         border-radius: 40px;
+       }
+     }
+   }
+
+    .section3 {
+      .collage {
+        @include flexing(flex, column, space-between);
+
+        &__row1 {
+          @include flexing(flex, row, space-between);
+          &__image {
+            border-radius: 3px;
+            @include wh(300px, 310px);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-family: Montserrat-Bold;
+            @include textSet(22px, 27px, none, white);
+            margin-bottom: 20px;
+            &-one {
+              background-image: url("../img/Section-3/One.png");
+            }
+            &-two {
+              background-image: url("../img/Section-3/Two.png");
+            }
+            &-three {
+              background-image: url("../img/Section-3/Three.png");
+              padding: 0 40px;
+            }
+          }
+        }
+
+        &__row2 {
+          @include flexing(flex, row, space-between);
+          &__image {
+            @include wh(300px, 310px);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-family: Montserrat-Bold;
+            @include textSet(22px, 27px, none, white);
+            margin-bottom: 20px;
+            &-four {
+              background-image: url("../img/Section-3/Four.png");
+            }
+            &-five {
+              background-image: url("../img/Section-3/Five.png");
+              @include wh(620px, 310px);
+            }
+          }
+        }
+
+        &__row3 {
+          @include flexing(flex, row, space-between);
+          &__image {
+            @include wh(300px, 310px);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-family: Montserrat-Bold;
+            @include textSet(22px, 27px, none, white);
+            &-six {
+              background-image: url("../img/Section-3/Six.png");
+              @include wh(620px, 310px);
+            }
+            &-seven {
+              background-image: url("../img/Section-3/Seven.png");
+            }
+          }
+        }
+      }
+    }
+
+    .section4 {
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 100px;
+      h5 {
+        font-family: Roboto-Light;
+        @include textSet(18px, 14px, none, #666666);
+        margin-top: 20px;
+      }
+      .search {
+        @include flexing(flex, row, space-between);
+        @include wh(480px, 40px);
+        margin-top: 24px;
+        &__enter {
+          font-family: Roboto-Light;
+          @include textSet(14px, 16px, none, #999999);
+          @include wh(299px, 40px);
+          background: white;
+          border-radius: 3px;
+          border: 1px #999999 solid;
+          padding: 14px 0 10px 14px;
+        }
+        &__submitting {
+          font-family: Montserrat-Bold;
+          @include textSet(14px, 17px, none, white);
+          @include wh(172px, 40px);
+          text-decoration: none;
+          background-color: $colorButton;
+          border: none;
+          border-radius: 40px;
+        }
+      }
+    }
+
+  }
+
+  footer {
+    @include flexing(flex, column, start);
+    align-items: center;
+    hr {
+      background-color: $colorButton;
+      height: 2px;
+      width: 100%;
+      margin: 0px 0 38px 0;
+      border: none;
+    }
+    .contain {
+      @include flexing(flex, row, space-between);
+      width: 944px;
+      &__preview {
+        font-family: Montserrat-Regular;
+        @include textSet(16px, 20px, none, $colorButton);
+      }
+      &__company {
+        font-family: Montserrat-Bold;
+        @include textSet(14px, 17px, none, #444444);
+        &__context {
+          @include flexing(flex, column, start);
+          margin-top: 10px;
+          &__text {
+            font-family: Roboto-Light;
+            @include textSet(14px, 26px, none, #999999);
+            text-decoration: none;
+          }
+        }
+      }
+      &__partners {
+        font-family: Montserrat-Bold;
+        @include textSet(14px, 17px, none, #444444);
+      }
+      &__logo {
+        background-image: url("../img/icons/Bitmap.png");
+        @include wh(113px, 43px);
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 10px 0 0 163px;
+      }
+    }
+  }
+}
+
+/*=====================================================================================*/
+/*----------------------------------Tablet Portrait------------------------------------*/
+/*=====================================================================================*/
+
+@media screen and (max-width: 1075px) and (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+    header {
+      .menu {
+        @include wh(88%, 36px);
+        &__logo {
+          &__item {
+          }
+        }
+        &__navigation {
+          &__item {
+            margin-left: 38px;
+            &-active {
+              margin-left: 17px;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      section {
+        @include wh(748px, auto);
+        margin: 95px auto;
+        h2 {
+          @include textSet(22px, 27px, none, #444444);
+        }
+        .cards {
+          &__card {
+            @include wh(236px, 400px);
+            padding: 21px 20px;
+            h3 {
+              @include textSet(24px, 14px, none, white);
+              margin: 47px 0 0;
+            }
+            .pSpace {
+              margin: 30px 0 -6px;
+            }
+          }
+        }
+      }
+
+      .section2 {
+        @include wh(492px, auto);
+        .cards {
+          @include flexing(flex, row wrap, space-between);
+          &__avatars {
+            @include wh(236px, 224px);
+            margin-bottom: 35px;
+          }
+        }
+        form {
+          margin-top: -14px;
+        }
+      }
+
+      .section3 {
+        .collage {
+          &__row1 {
+            &__image {
+              @include wh(236px, 310px);
+              &-three {
+                padding: 0 4px;
+              }
+            }
+          }
+
+          &__row2 {
+            &__image {
+              @include wh(236px, 310px);
+              border-radius: 3px;
+              &-five {
+                @include wh(492px, 310px);
+              }
+            }
+          }
+
+          &__row3 {
+            &__image {
+              @include wh(236px, 310px);
+              &-six {
+                @include wh(492px, 310px);
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    footer {
+      .contain {
+        width: 688px;
+        &__company {
+          margin-left: 37px;
+        }
+        &__logo {
+          margin: 0px 0 0 47px;
+        }
+      }
+    }
+  }
+}
+
+/*=====================================================================================*/
+/*----------------------------------Mobile Portrait------------------------------------*/
+/*=====================================================================================*/
+
+@media screen and (max-width: 767px) and (min-width: 0px) {
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+    header {
+      height: 540px;
+      padding-top: 20px;
+      .menu {
+        @include wh(48.5%, 36px);
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        &__logo {
+          position: absolute;
+          top: 152px;
+          width: 160px;
+        }
+        &__navigation {
+          width: 155px;
+        }
+      }
+      .underMenu {
+        margin-top: 146.5px;
+        @include wh(281px, 234px);
+        text-align: center;
+        h1 {
+          @include textSet(30px, 37px, none, white);
+        }
+        h7 {
+          @include textSet(18px, 24px, none, white);
+          margin-bottom: 10px;
+          text-align: center;
+        }
+        form {
+          .mainButton {
+            @include textSet(14px, 17px, none, white);
+            @include wh(280px, 40px);
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+
+    main {
+      section {
+        @include wh(300px, auto);
+        margin: 33px auto;
+        h2 {
+          @include textSet(22px, 27px, none, #444444);
+          margin-bottom: 16px;
+        }
+        .cards {
+          margin-bottom: -8px;
+          @include flexing(flex, row wrap, center);
+          &__card {
+            margin-bottom: 10px;
+            @include wh(300px, 240px);
+            padding: 15px 20px;
+            &-one {
+              background-image: url("../img/Mobile/s1-one.png");
+            }
+            &-two {
+              background-image: url("../img/Mobile/s1-two.png");
+            }
+            &-three {
+              background-image: url("../img/Mobile/s1-three.png");
+            }
+            &__steps {
+              font-family: Montserrat-Regular;
+              @include wh(70px, 20px);
+              @include textSet(10px, 12px, none, white);
+              @include flexing(flex, column, center);
+              background-color: $colorButton;
+              border-radius: 40px;
+              text-align: center;
+            }
+            h3 {
+              @include textSet(24px, 14px, none, white);
+              margin: 50px 0 0;
+            }
+            .pSpace {
+              margin: 20px 0 0;
+            }
+          }
+        }
+      }
+
+      .section2 {
+        .cards {
+          @include flexing(flex, row wrap, center);
+          &__avatars {
+            @include wh(236px, 224px);
+            @include flexing(flex, column, start);
+          }
+        }
+        form {
+          .seeOther {
+            @include wh(280px, 40px);
+          }
+        }
+      }
+
+      .section3 {
+        .discover {
+          padding: 0 20px;
+          margin-bottom: 33px;
+        }
+        .collage {
+          @include flexing(flex, column, space-between);
+
+          &__row1 {
+            @include flexing(flex, row wrap, center);
+            &__image {
+              @include wh(300px, 120px);
+              margin-bottom: 10px;
+              &-one {
+                background-image: url("../img/Mobile/s2-one.png");
+                padding: 0 65px;
+              }
+              &-two {
+                background-image: url("../img/Mobile/s2-two.png");
+                padding: 0 40px;
+              }
+              &-three {
+                background-image: url("../img/Mobile/s2-three.png");
+                padding: 0 40px;
+              }
+            }
+          }
+
+          &__row2 {
+            @include flexing(flex, row wrap, center);
+            &__image {
+              @include wh(300px, 120px);
+              margin-bottom: 10px;
+              &-four {
+                background-image: url("../img/Mobile/s2-four.png");
+              }
+              &-five {
+                background-image: url("../img/Mobile/s2-five.png");
+              }
+            }
+          }
+
+          &__row3 {
+            @include flexing(flex, row wrap, center);
+            margin-bottom: -6px;
+            &__image {
+              @include wh(300px, 120px);
+              margin-bottom: 10px;
+              &-six {
+                background-image: url("../img/Mobile/s2-six.png");
+              }
+              &-seven {
+                background-image: url("../img/Mobile/s2-seven.png");
+              }
+            }
+          }
+        }
+      }
+
+      .section4 {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 30px;
+        h5 {
+          font-family: Roboto-Light;
+          @include textSet(18px, 14px, none, #666666);
+          margin-top: 2px;
+        }
+        .search {
+          @include flexing(flex, row wrap, center);
+          @include wh(280px, 100px);
+          margin-top: 15px;
+          &__enter {
+            font-family: Roboto-Light;
+            @include textSet(14px, 16px, none, #999999);
+            @include wh(299px, 40px);
+            background: white;
+            border-radius: 3px;
+            border: 1px #999999 solid;
+            padding: 14px 0 10px 14px;
+          }
+          &__submitting {
+            font-family: Montserrat-Bold;
+            @include textSet(14px, 17px, none, white);
+            @include wh(280px, 40px);
+            text-decoration: none;
+            background-color: $colorButton;
+            border: none;
+            border-radius: 40px;
+          }
+        }
+      }
+
+    }
+
+    footer {
+      @include flexing(flex, column, start);
+      align-items: center;
+      hr {
+        margin: 0px 0 20px 0;
+      }
+      .contain {
+        @include flexing(flex, column, start);
+        align-items: center;
+        width: 320px;
+        &__preview {
+          margin-bottom: 14px;
+        }
+        &__company {
+          text-align: center;
+          &__context {
+            @include flexing(flex, row wrap, center);
+            width: 240px;
+            margin-top: 0px;
+            &__text {
+              font-family: Roboto-Light;
+              margin: 0 7px;
+            }
+          }
+        }
+        &__partners {
+          margin-top: 6px;
+        }
+        &__logo {
+          margin: 23px 0 0 0;
+        }
+      }
+    }
+  }
+}

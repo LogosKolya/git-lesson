@@ -1,0 +1,1251 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("./fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("./fonts/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./fonts/Montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("./fonts/Montserrat/Montserrat-Regular.ttf");
+}
+/*=====================================================================================*/
+/*----------------------------------Desktop Portrait-----------------------------------*/
+/*=====================================================================================*/
+body {
+  overflow-x: hidden;
+}
+body header {
+  background-color: lightsalmon;
+  height: 700px;
+  background-image: url("../img/BG.png");
+  padding-top: 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body header .menu {
+  width: 65.5%;
+  height: 36px;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+body header .menu__logo {
+  width: 300px;
+}
+body header .menu__logo__item {
+  font-family: Montserrat-Bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+}
+body header .menu__navigation {
+  width: 195px;
+  justify-content: start;
+}
+body header .menu__navigation__item {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: white;
+}
+body header .menu__navigation__item-active {
+  border: white 1px solid;
+  border-radius: 40px;
+  padding: 8px 16px;
+  margin-left: 17px;
+}
+body header .underMenu {
+  margin-top: 149.5px;
+  width: 470px;
+  height: 252.5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .underMenu h1 {
+  font-family: Montserrat-Bold;
+  font-size: 52px;
+  line-height: 63px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+body header .underMenu h7 {
+  font-family: Roboto-Light;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 5px;
+}
+body header .underMenu form .mainButton {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: white;
+  width: 225px;
+  height: 40px;
+  text-decoration: none;
+  background-color: #FF4E50;
+  border: none;
+  border-radius: 40px;
+}
+body main section {
+  width: 940px;
+  height: auto;
+  margin: 90px auto;
+}
+body main section h2 {
+  font-family: Montserrat-Bold;
+  font-size: 26px;
+  line-height: 32px;
+  text-decoration: none;
+  color: #444444;
+  text-align: center;
+  margin-bottom: 34px;
+}
+body main section .cards {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+body main section .cards__card {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  background-color: #FF4E50;
+  border-radius: 3px;
+  padding: 21px 25px;
+}
+body main section .cards__card-one {
+  background-image: url("../img/Section-1/one.png");
+}
+body main section .cards__card-two {
+  background-image: url("../img/Section-1/Two.png");
+}
+body main section .cards__card-three {
+  background-image: url("../img/Section-1/Three.png");
+}
+body main section .cards__card__steps {
+  font-family: Montserrat-Regular;
+  width: 70px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 12px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-color: #FF4E50;
+  border-radius: 40px;
+  text-align: center;
+}
+body main section .cards__card h3 {
+  font-family: Montserrat-Bold;
+  font-size: 24px;
+  line-height: 26px;
+  text-decoration: none;
+  color: white;
+  margin: 23px 0 0;
+}
+body main section .cards__card .pSpace {
+  font-family: Roboto-Light;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+  color: gray;
+  margin: 23px 0 0;
+}
+body main .section2 .cards {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+body main .section2 .cards__avatars {
+  width: 221px;
+  height: 224px;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+}
+body main .section2 .cards__avatars__ava {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+}
+body main .section2 .cards__avatars__ava-one {
+  background-image: url("../img/Section-2/One.png");
+}
+body main .section2 .cards__avatars__ava-one::after {
+  content: "";
+  background-image: url("../img/icons/music2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-color: #FF4E50;
+  margin: 83px 0 0 83px;
+  border-radius: 32px;
+  border: 5px white solid;
+  box-sizing: content-box;
+}
+body main .section2 .cards__avatars__ava-two {
+  background-image: url("../img/Section-2/Two.png");
+}
+body main .section2 .cards__avatars__ava-two::after {
+  content: "";
+  background-image: url("../img/icons/brush.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-color: #19D4CA;
+  margin: 83px 0 0 83px;
+  border-radius: 32px;
+  border: 5px white solid;
+  box-sizing: content-box;
+}
+body main .section2 .cards__avatars__ava-three {
+  background-image: url("../img/Section-2/Three.png");
+}
+body main .section2 .cards__avatars__ava-three::after {
+  content: "";
+  background-image: url("../img/icons/camera.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-color: #FFA710;
+  margin: 83px 0 0 83px;
+  border-radius: 32px;
+  border: 5px white solid;
+  box-sizing: content-box;
+}
+body main .section2 .cards__avatars__ava-four {
+  background-image: url("../img/Section-2/Four.png");
+}
+body main .section2 .cards__avatars__ava-four::after {
+  content: "";
+  background-image: url("../img/icons/airplane.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-color: #667DF3;
+  margin: 83px 0 0 83px;
+  border-radius: 32px;
+  border: 5px white solid;
+  box-sizing: content-box;
+}
+body main .section2 .cards__avatars h4 {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #444444;
+  margin: 19px 0;
+}
+body main .section2 .cards__avatars .pCenter {
+  font-family: Roboto-Light;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+  color: gray;
+  text-align: center;
+}
+body main .section2 form {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin-top: 35px;
+}
+body main .section2 form .seeOther {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #FF4E50;
+  width: 180px;
+  height: 40px;
+  text-decoration: none;
+  background-color: white;
+  border: none;
+  border: 2px #FF4E50 solid;
+  border-radius: 40px;
+}
+body main .section3 .collage {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+body main .section3 .collage__row1 {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+body main .section3 .collage__row1__image {
+  border-radius: 3px;
+  width: 300px;
+  height: 310px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: Montserrat-Bold;
+  font-size: 22px;
+  line-height: 27px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+}
+body main .section3 .collage__row1__image-one {
+  background-image: url("../img/Section-3/One.png");
+}
+body main .section3 .collage__row1__image-two {
+  background-image: url("../img/Section-3/Two.png");
+}
+body main .section3 .collage__row1__image-three {
+  background-image: url("../img/Section-3/Three.png");
+  padding: 0 40px;
+}
+body main .section3 .collage__row2 {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+body main .section3 .collage__row2__image {
+  width: 300px;
+  height: 310px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: Montserrat-Bold;
+  font-size: 22px;
+  line-height: 27px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+}
+body main .section3 .collage__row2__image-four {
+  background-image: url("../img/Section-3/Four.png");
+}
+body main .section3 .collage__row2__image-five {
+  background-image: url("../img/Section-3/Five.png");
+  width: 620px;
+  height: 310px;
+}
+body main .section3 .collage__row3 {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+body main .section3 .collage__row3__image {
+  width: 300px;
+  height: 310px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: Montserrat-Bold;
+  font-size: 22px;
+  line-height: 27px;
+  text-decoration: none;
+  color: white;
+}
+body main .section3 .collage__row3__image-six {
+  background-image: url("../img/Section-3/Six.png");
+  width: 620px;
+  height: 310px;
+}
+body main .section3 .collage__row3__image-seven {
+  background-image: url("../img/Section-3/Seven.png");
+}
+body main .section4 {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 100px;
+}
+body main .section4 h5 {
+  font-family: Roboto-Light;
+  font-size: 18px;
+  line-height: 14px;
+  text-decoration: none;
+  color: #666666;
+  margin-top: 20px;
+}
+body main .section4 .search {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 480px;
+  height: 40px;
+  margin-top: 24px;
+}
+body main .section4 .search__enter {
+  font-family: Roboto-Light;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #999999;
+  width: 299px;
+  height: 40px;
+  background: white;
+  border-radius: 3px;
+  border: 1px #999999 solid;
+  padding: 14px 0 10px 14px;
+}
+body main .section4 .search__submitting {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: white;
+  width: 172px;
+  height: 40px;
+  text-decoration: none;
+  background-color: #FF4E50;
+  border: none;
+  border-radius: 40px;
+}
+body footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+}
+body footer hr {
+  background-color: #FF4E50;
+  height: 2px;
+  width: 100%;
+  margin: 0px 0 38px 0;
+  border: none;
+}
+body footer .contain {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 944px;
+}
+body footer .contain__preview {
+  font-family: Montserrat-Regular;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #FF4E50;
+}
+body footer .contain__company {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #444444;
+}
+body footer .contain__company__context {
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  margin-top: 10px;
+}
+body footer .contain__company__context__text {
+  font-family: Roboto-Light;
+  font-size: 14px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #999999;
+  text-decoration: none;
+}
+body footer .contain__partners {
+  font-family: Montserrat-Bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #444444;
+}
+body footer .contain__logo {
+  background-image: url("../img/icons/Bitmap.png");
+  width: 113px;
+  height: 43px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px 0 0 163px;
+}
+
+/*=====================================================================================*/
+/*----------------------------------Tablet Portrait------------------------------------*/
+/*=====================================================================================*/
+@media screen and (max-width: 1075px) and (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  body header .menu {
+    width: 88%;
+    height: 36px;
+  }
+  body header .menu__navigation__item {
+    margin-left: 38px;
+  }
+  body header .menu__navigation__item-active {
+    margin-left: 17px;
+  }
+  body main section {
+    width: 748px;
+    height: auto;
+    margin: 95px auto;
+  }
+  body main section h2 {
+    font-size: 22px;
+    line-height: 27px;
+    text-decoration: none;
+    color: #444444;
+  }
+  body main section .cards__card {
+    width: 236px;
+    height: 400px;
+    padding: 21px 20px;
+  }
+  body main section .cards__card h3 {
+    font-size: 24px;
+    line-height: 14px;
+    text-decoration: none;
+    color: white;
+    margin: 47px 0 0;
+  }
+  body main section .cards__card .pSpace {
+    margin: 30px 0 -6px;
+  }
+  body main .section2 {
+    width: 492px;
+    height: auto;
+  }
+  body main .section2 .cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  body main .section2 .cards__avatars {
+    width: 236px;
+    height: 224px;
+    margin-bottom: 35px;
+  }
+  body main .section2 form {
+    margin-top: -14px;
+  }
+  body main .section3 .collage__row1__image {
+    width: 236px;
+    height: 310px;
+  }
+  body main .section3 .collage__row1__image-three {
+    padding: 0 4px;
+  }
+  body main .section3 .collage__row2__image {
+    width: 236px;
+    height: 310px;
+    border-radius: 3px;
+  }
+  body main .section3 .collage__row2__image-five {
+    width: 492px;
+    height: 310px;
+  }
+  body main .section3 .collage__row3__image {
+    width: 236px;
+    height: 310px;
+  }
+  body main .section3 .collage__row3__image-six {
+    width: 492px;
+    height: 310px;
+  }
+  body footer .contain {
+    width: 688px;
+  }
+  body footer .contain__company {
+    margin-left: 37px;
+  }
+  body footer .contain__logo {
+    margin: 0px 0 0 47px;
+  }
+}
+/*=====================================================================================*/
+/*----------------------------------Mobile Portrait------------------------------------*/
+/*=====================================================================================*/
+@media screen and (max-width: 767px) and (min-width: 0px) {
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+  body header {
+    height: 540px;
+    padding-top: 20px;
+  }
+  body header .menu {
+    width: 48.5%;
+    height: 36px;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  body header .menu__logo {
+    position: absolute;
+    top: 152px;
+    width: 160px;
+  }
+  body header .menu__navigation {
+    width: 155px;
+  }
+  body header .underMenu {
+    margin-top: 146.5px;
+    width: 281px;
+    height: 234px;
+    text-align: center;
+  }
+  body header .underMenu h1 {
+    font-size: 30px;
+    line-height: 37px;
+    text-decoration: none;
+    color: white;
+  }
+  body header .underMenu h7 {
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  body header .underMenu form .mainButton {
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: white;
+    width: 280px;
+    height: 40px;
+    margin-bottom: 50px;
+  }
+  body main section {
+    width: 300px;
+    height: auto;
+    margin: 33px auto;
+  }
+  body main section h2 {
+    font-size: 22px;
+    line-height: 27px;
+    text-decoration: none;
+    color: #444444;
+    margin-bottom: 16px;
+  }
+  body main section .cards {
+    margin-bottom: -8px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  body main section .cards__card {
+    margin-bottom: 10px;
+    width: 300px;
+    height: 240px;
+    padding: 15px 20px;
+  }
+  body main section .cards__card-one {
+    background-image: url("../img/Mobile/s1-one.png");
+  }
+  body main section .cards__card-two {
+    background-image: url("../img/Mobile/s1-two.png");
+  }
+  body main section .cards__card-three {
+    background-image: url("../img/Mobile/s1-three.png");
+  }
+  body main section .cards__card__steps {
+    font-family: Montserrat-Regular;
+    width: 70px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 12px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #FF4E50;
+    border-radius: 40px;
+    text-align: center;
+  }
+  body main section .cards__card h3 {
+    font-size: 24px;
+    line-height: 14px;
+    text-decoration: none;
+    color: white;
+    margin: 50px 0 0;
+  }
+  body main section .cards__card .pSpace {
+    margin: 20px 0 0;
+  }
+  body main .section2 .cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  body main .section2 .cards__avatars {
+    width: 236px;
+    height: 224px;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+  }
+  body main .section2 form .seeOther {
+    width: 280px;
+    height: 40px;
+  }
+  body main .section3 .discover {
+    padding: 0 20px;
+    margin-bottom: 33px;
+  }
+  body main .section3 .collage {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  body main .section3 .collage__row1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  body main .section3 .collage__row1__image {
+    width: 300px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  body main .section3 .collage__row1__image-one {
+    background-image: url("../img/Mobile/s2-one.png");
+    padding: 0 65px;
+  }
+  body main .section3 .collage__row1__image-two {
+    background-image: url("../img/Mobile/s2-two.png");
+    padding: 0 40px;
+  }
+  body main .section3 .collage__row1__image-three {
+    background-image: url("../img/Mobile/s2-three.png");
+    padding: 0 40px;
+  }
+  body main .section3 .collage__row2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  body main .section3 .collage__row2__image {
+    width: 300px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  body main .section3 .collage__row2__image-four {
+    background-image: url("../img/Mobile/s2-four.png");
+  }
+  body main .section3 .collage__row2__image-five {
+    background-image: url("../img/Mobile/s2-five.png");
+  }
+  body main .section3 .collage__row3 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: -6px;
+  }
+  body main .section3 .collage__row3__image {
+    width: 300px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  body main .section3 .collage__row3__image-six {
+    background-image: url("../img/Mobile/s2-six.png");
+  }
+  body main .section3 .collage__row3__image-seven {
+    background-image: url("../img/Mobile/s2-seven.png");
+  }
+  body main .section4 {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  body main .section4 h5 {
+    font-family: Roboto-Light;
+    font-size: 18px;
+    line-height: 14px;
+    text-decoration: none;
+    color: #666666;
+    margin-top: 2px;
+  }
+  body main .section4 .search {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 280px;
+    height: 100px;
+    margin-top: 15px;
+  }
+  body main .section4 .search__enter {
+    font-family: Roboto-Light;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #999999;
+    width: 299px;
+    height: 40px;
+    background: white;
+    border-radius: 3px;
+    border: 1px #999999 solid;
+    padding: 14px 0 10px 14px;
+  }
+  body main .section4 .search__submitting {
+    font-family: Montserrat-Bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: white;
+    width: 280px;
+    height: 40px;
+    text-decoration: none;
+    background-color: #FF4E50;
+    border: none;
+    border-radius: 40px;
+  }
+  body footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: center;
+  }
+  body footer hr {
+    margin: 0px 0 20px 0;
+  }
+  body footer .contain {
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: center;
+    width: 320px;
+  }
+  body footer .contain__preview {
+    margin-bottom: 14px;
+  }
+  body footer .contain__company {
+    text-align: center;
+  }
+  body footer .contain__company__context {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 240px;
+    margin-top: 0px;
+  }
+  body footer .contain__company__context__text {
+    font-family: Roboto-Light;
+    margin: 0 7px;
+  }
+  body footer .contain__partners {
+    margin-top: 6px;
+  }
+  body footer .contain__logo {
+    margin: 23px 0 0 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

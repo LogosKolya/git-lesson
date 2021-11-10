@@ -1,0 +1,17 @@
+@mixin textSet($fs, $lh, $td, $cl) {
+    font-size: $fs;
+    line-height: $lh;
+    text-decoration: $td;
+    color: $cl;
+}
+
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+@mixin flexing($df, $ff, $jc) {
+    display: $df;
+    flex-flow: $ff;
+    justify-content: $jc;
+}
+
